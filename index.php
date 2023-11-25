@@ -41,8 +41,6 @@ $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                 'apiKey': 'AIzaSyATSGy07kZdwtt7AboTq0RtibeBvHsc3CI',
                 'projectId': 'alihashemi-main-website',
                 'appId': '1:718463455121:web:b6bb0bd265ec2251a55430',
-           
-                
             };
             firebase.initializeApp(config);
     
