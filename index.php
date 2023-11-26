@@ -1,11 +1,12 @@
 <html>
 <?php
-$actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$actual_link = "https://$_SERVER[HTTP_HOST]";
 
 ?>
 <head>
     <title>Firebase Messaging Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="/site.webmanifest">  
     <style>
         div {
             margin-bottom: 15px;
@@ -56,7 +57,7 @@ $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                 })
                 .then(function(token) {
                     TokenElem.value = token
-                    LinkElem.value = '<?php echo $actual_link; ?>send.php?token=' + token;
+                    LinkElem.value = '<?php echo $actual_link; ?>/send.php?token=' + token;
                     console.log('Copy link and paste in another browser.');
                 })
                 .catch(function (err) {
